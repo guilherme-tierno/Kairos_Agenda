@@ -1,7 +1,7 @@
-# Kairos_Agenda
+## Kairos_Agenda
 Organizador de estudos para estudantes com dificuldade de rotina - Projeto de Bootcamp II do curso de ADS - Centro de Ensino Unificado de Brasília CEUB
 
-# Problema:
+## Problema:
 Muitos estudantes têm dificuldade em manter uma rotina de estudos consistente, esquecendo tarefas, perdendo prazos e não conseguindo visualizar seu progresso.
 
 # Público-alvo:
@@ -18,9 +18,7 @@ Uma aplicação CLI simples que permite:
 - Marcar como concluída
 - Listar progresso
 
-###### ##################################################################################################
-
-# Stack Tecnológica 
+## Stack Tecnológica 
 
 - Linguagem: Python 3
 - CLI: argparse
@@ -28,3 +26,15 @@ Uma aplicação CLI simples que permite:
 - Testes: pytest
 - Lint: ruff
 - CI: GitHub Actions
+
+## Crie e ative um ambiente virtual:
+
+python -m venv venv
+
+para ativar:
+- Windows: .\venv\Scripts\activate
+- Linux/Mac: source venv/bin/activate
+
+# Instale as dependências:
+
+pip install -r requirements.txt
