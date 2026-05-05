@@ -1,4 +1,4 @@
-from storage import load_tasks, save_tasks
+from .storage import load_tasks, save_tasks
 
 def add_task(title):
     tasks = load_tasks()
