@@ -1,40 +1,154 @@
 ## Kairos_Agenda
-Organizador de estudos para estudantes com dificuldade de rotina - Projeto de Bootcamp II do curso de ADS - Centro de Ensino Unificado de Brasília CEUB
 
-## Problema:
-Muitos estudantes têm dificuldade em manter uma rotina de estudos consistente, esquecendo tarefas, perdendo prazos e não conseguindo visualizar seu progresso.
+# Descrição do Problema
+A falta de organização e consistência nos estudos é uma dificuldade comum entre estudantes. Muitos enfrentam problemas para manter uma rotina estruturada, acompanhar tarefas e visualizar seu progresso ao longo do tempo.
+Essa desorganização pode resultar em baixo desempenho acadêmico, procrastinação e sobrecarga mental.
+________________________________________
 
-# Público-alvo:
+# Proposta de Solução
+O Kairos_Agenda CLI é uma aplicação de linha de comando desenvolvida em Python que auxilia estudantes na organização de suas atividades de estudo.
 
+A ferramenta permite registrar tarefas, acompanhar seu status (pendente ou completo) e manter um fluxo simples e consistente de organização.
+
+A escolha por uma interface CLI garante leveza, rapidez e acessibilidade, sem depender de interfaces gráficas complexas.
+________________________________________
+
+# Público-Alvo
 - Estudantes do ensino médio e superior
-- Pessoas que estudam para concursos/ENEM
-- Autodidatas com dificuldade de organização
+- Pessoas com dificuldade em manter rotina de estudos
+- Autodidatas que buscam organização
+- Usuários que preferem ferramentas simples e diretas
+________________________________________
 
-# Solução proposta:
-Uma aplicação CLI simples que permite:
+# Funcionalidades
+- Adicionar tarefas de estudo
+- Listar tarefas cadastradas
+- Marcar tarefas como concluídas
+- Visualizar status das tarefas (pendente/completo)
+________________________________________
 
-- Criar tarefas de estudo
-- Definir prioridade e prazo
-- Marcar como concluída
-- Listar progresso
+# Tecnologias Utilizadas
+- Python 3.11
+- Pytest (testes automatizados)
+- Ruff (linting e análise estática)
+- JSON (armazenamento local de dados)
+- Git + GitHub
+- GitHub Actions (CI/CD)
+________________________________________
 
-## Stack Tecnológica 
+# Estrutura do Projeto
 
-- Linguagem: Python 3
-- CLI: argparse
-- Armazenamento: JSON
-- Testes: pytest
-- Lint: ruff
-- CI: GitHub Actions
+Kairos_Agenda/
+├── src/
+│   ├── main.py
+│   ├── task_manager.py
+│   └── storage.py
+├── tests/
+├── data/
+├── README.md
+├── requirements.txt
+├── VERSION
+└── .github/workflows/ci.yml
+________________________________________
 
-## Crie e ative um ambiente virtual:
+# Instalação
+1. Clonar o repositório
+
+git clone https://github.com/guilherme-tierno/Kairos_Agenda.git
+
+cd Kairos_Agenda
+
+2. Criar ambiente virtual
 
 python -m venv venv
 
-para ativar:
-- Windows: .\venv\Scripts\activate
-- Linux/Mac: source venv/bin/activate
+3. Ativar ambiente
 
-# Instale as dependências:
+Windows
+- venv\Scripts\activate
 
+Linux/Mac
+- source venv/bin/activate
+
+4. Instalar dependências
 pip install -r requirements.txt
+________________________________________
+
+# Execução da Aplicação
+
+- Adicionar tarefa
+python src/main.py add "Estudar matemática"
+
+- Listar tarefas
+python src/main.py list
+
+- Saída esperada:
+0 - Estudar matemática [pendente]
+
+- Marcar como concluída
+python src/main.py done 0
+
+-Saída atualizada:
+0 - Estudar matemática [completo]
+________________________________________
+
+# Testes Automatizados
+
+Para executar os testes:
+
+python -m pytest
+
+Os testes cobrem:
+- Adição de tarefas
+- Retorno da lista de tarefas
+- Tratamento de índice inválido
+________________________________________
+
+Lint (Qualidade de Código)
+Para verificar o código:
+
+ruff check .
+________________________________________
+
+# Integração Contínua (CI)
+O projeto utiliza GitHub Actions para garantir qualidade contínua.
+
+A cada push ou pull request, o sistema executa automaticamente:
+- Instalação das dependências
+- Análise estática (lint)
+- Execução dos testes
+________________________________________
+
+# Versionamento
+Este projeto segue o padrão de versionamento semântico:
+MAJOR.MINOR.PATCH
+
+Versão atual:
+1.0.0
+________________________________________
+
+# Armazenamento de Dados
+Os dados são armazenados localmente em um arquivo JSON:
+
+data/tasks.json
+
+O sistema possui tratamento para:
+- Arquivos inexistentes
+- Arquivos vazios
+- JSON inválido
+________________________________________
+
+# Decisões de Design
+
+- Uso de CLI para simplicidade e acessibilidade
+- Uso de texto ("pendente" / "completo") em vez de símbolos, visando maior clareza
+- Estrutura modular para facilitar manutenção
+- Uso de testes automatizados para garantir confiabilidade
+________________________________________
+
+Autor: Guilherme Ortega Tierno
+RA: 22509351
+________________________________________
+
+Repositório
+https://github.com/guilherme-tierno/Kairos_Agenda.git
