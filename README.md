@@ -146,6 +146,19 @@ ________________________________________
 - Uso de testes automatizados para garantir confiabilidade
 ________________________________________
 
+## Frases Motivacionais
+
+O projeto consome a API pública ZenQuotes para fornecer frases motivacionais aos estudantes.
+
+bash-
+- python src/main.py quote
+
+Nota importante:
+- Durante os testes e após o projeto pronto mesmo após sucesso houveram alguns erros SSL / HTTPS ao tentar acessar a API.
+- Foram utilizadas as API's: https://api.quotable.io/random e https://zenquotes.io/api/random.
+- Em caso de erro constante tente modificar o arquivo "motivacional_api.py" com o conteudo do arquivo "teste_mot_api.txt"
+________________________________________
+
 Autor: Guilherme Ortega Tierno
 RA: 22509351
 ________________________________________
