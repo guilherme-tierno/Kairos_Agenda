@@ -110,6 +110,21 @@ Para verificar o código:
 ruff check .
 ________________________________________
 
+## Execução Online (GitHub Codespaces)
+
+O projeto pode ser executado diretamente no GitHub Codespaces.
+
+Passos:
+1. Clique em "Code"
+2. Vá em "Codespaces"
+3. Clique em "Create codespace on main"
+4. Execute:
+
+```bash
+pip install -r requirements.txt
+python -m src.main list
+________________________________________
+
 # Integração Contínua (CI)
 O projeto utiliza GitHub Actions para garantir qualidade contínua.
 
